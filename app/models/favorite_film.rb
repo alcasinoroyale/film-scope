@@ -1,0 +1,2 @@
+class FavoriteFilm < ApplicationRecord
+end
