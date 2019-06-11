@@ -1,18 +1,24 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './containers/Home'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './containers/Home';
+import FilmsContainer from './containers/FilmsContainer';
+import FavoritesContainer from './containers/FavoritesContainer';
+import Navbar from './components/Navbar';
 
 const App = () => {
 
   return(
     <div className="App">
       <div className="container">
-        <BrowserRouter>
+        <Router>
           <Route>
+            <Navbar />
           </Route>
           <Route exact path="/" component={Home}/>
-        </BrowserRouter>
+          <Route exact path="/films" />
+          <Route exact path="/favorites" />
+        </Router>
       </div>
     </div>
   )
