@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './components/Header';
 
 const App = () => {
 
@@ -9,6 +9,9 @@ const App = () => {
     <div className="App">
       <div className="container">
         <BrowserRouter>
+          <Route>
+            <Header />
+          </Route>
         </BrowserRouter>
       </div>
     </div>
