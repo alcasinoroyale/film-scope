@@ -18,9 +18,20 @@ class UsersController < ApplicationController
     render json: films
   end
 
+  def add_to_favorite_films
+    current_user = User.find(params[:id])
+    film = Film.find_or_create_by(film_params)
+    current_user.favorite_films << film unless current_user.favorite_films.include?(film)
+    render json: current_user.favorite_films
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :email, :password)
+  end
+
+  def film_params
+    params.require(:film).permit(:title, :genre, :description)
   end
 end
