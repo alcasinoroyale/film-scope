@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     render json: films
   end
 
-  def add_to_favorite_films
+  def add_favorites
     current_user = User.find(params[:id])
     film = Film.find_or_create_by(film_params)
     current_user.favorite_films << film unless current_user.favorite_films.include?(film)
