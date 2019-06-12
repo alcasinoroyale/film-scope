@@ -1,14 +1,19 @@
+body {
+  background: #1C2F35;
+  color: #f2f2f2;
+}
+
 .header {
-  background: #132d44;
-  color: #fff;
+  color: #f2f2f2;
   text-align: center;
-  padding: 20px;
 }
 
 .navMenu a {
   padding: 16px 20px;
-  font-size: 24px;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
   text-decoration: none;
+  color: #f2f2f2;
 }
 
 .navMenu a:hover {
@@ -16,6 +21,10 @@
 }
 
 .navMenu {
-  background-color: #fff;
+  background: transparent;
   margin-top: 10px;
+}
+
+h2 {
+  padding-left: 20px;
 }
