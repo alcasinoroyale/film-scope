@@ -16,8 +16,8 @@ const App = () => {
             <Navbar />
           </Route>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/films" />
-          <Route exact path="/favorites" />
+          <Route exact path="/films" component={FilmsContainer}/>
+          <Route exact path="/favorites" component={FavoritesContainer} />
         </Router>
       </div>
     </div>

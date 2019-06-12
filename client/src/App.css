@@ -4,3 +4,18 @@
   text-align: center;
   padding: 20px;
 }
+
+.navMenu a {
+  padding: 16px 20px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.navMenu a:hover {
+  color: black;
+}
+
+.navMenu {
+  background-color: #fff;
+  margin-top: 10px;
+}
