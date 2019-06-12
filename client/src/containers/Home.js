@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Login from '../components/Login';
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
         <Header />
       </div>
       <div>
-        <h2>Home Page</h2>
+        <Login />
       </div>
     </div>
   )
