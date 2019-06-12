@@ -1,11 +1,14 @@
 body {
-  background: #1C2F35;
-  color: #f2f2f2;
+  background: #CA843A;
+  color: #3D2F1F;
 }
 
 .header {
-  color: #f2f2f2;
+  color: #DF4C24;
+  letter-spacing: 20px;
+  word-spacing: 60px;
   text-align: center;
+  font-family: 'Lato', sans-serif;
   background-image: url("images/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,11 +22,11 @@ body {
   font-size: 18px;
   font-family: 'Lato', sans-serif;
   text-decoration: none;
-  color: #f2f2f2;
+  color: #3D2F1F;
 }
 
 .navMenu a:hover {
-  color: black;
+  color: #3C4F1B;
 }
 
 .navMenu {
