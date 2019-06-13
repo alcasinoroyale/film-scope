@@ -51,4 +51,4 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   fetchUsers, }, dispatch)
 
 
-export default connect(mapDispatchToProps)(Login)
+export default connect(null, mapDispatchToProps)(Login)
