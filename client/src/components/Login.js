@@ -9,6 +9,10 @@ class Login extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchUsers()
+  }
+
   handleChange = event => {
     this.setState({
       ...this.state,
