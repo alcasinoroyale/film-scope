@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { fetchUsers } from '../actions/userActions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 class Login extends Component {
   constructor() {
@@ -44,4 +47,8 @@ class Login extends Component {
   }
 }
 
-export default Login
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  fetchUsers, }, dispatch)
+
+
+export default connect(mapDispatchToProps)(Login)
