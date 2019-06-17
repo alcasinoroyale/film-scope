@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Login from '../components/Login';
-import Signup from '../components/Signup';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -10,8 +9,7 @@ const Home = () => {
         <Header />
       </div>
       <div>
-        <Signup />
-        <Login />
+        <Footer />
       </div>
     </div>
   )
