@@ -37,3 +37,11 @@ body {
 h2 {
   padding-left: 20px;
 }
+
+.control {
+  padding: 10px 0px;
+}
+
+form {
+  padding: 0px 10px;
+}

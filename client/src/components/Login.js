@@ -4,11 +4,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      username: "",
-      password: ""
+      username: '',
+      password: ''
     }
   }
 
@@ -20,24 +20,41 @@ class Login extends Component {
   }
 
   handleSubmit = event => {
-    console.log("Logging In")
-    console.log(this.state);
-    debugger
+    console.log(this.state)
+    event.preventDefault();
   }
 
   render() {
     const { username, password } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        Username
-        <input type="text" name="username" placeholder="Enter username" value={username}
-        onChange={this.handleChange}
-        />
-        Password
-        <input type="password" name="password" placeholder="Enter password" value={password}
-        onChange={this.handleChange}
-        />
-        <button type="submit" value="Login">Login</button>
+        <h3>Login</h3>
+
+        <label>Username</label>
+        <div className="control">
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter username"
+            value={username}
+            onChange={this.handleChange}
+            />
+        </div>
+
+        <label>Password</label>
+        <div className="control">
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            value={password}
+            onChange={this.handleChange}
+          />
+        </div>
+
+        <div className="submit">
+          <button type="submit" value="Login">Login</button>
+        </div>
       </form>
     )
   }
