@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { fetchUsers } from '../actions/userActions';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
-class Login extends Component {
+class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      email: '',
+      password: '',
+      confirmPassword: ''
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange = event => {
@@ -27,10 +24,10 @@ class Login extends Component {
   }
 
   render() {
-    const { username, password } = this.state;
+    const { username, email, password } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>Login</h3>
+        <h3>Sign Up</h3>
 
         <label>Username</label>
         <div className="control">
@@ -41,6 +38,17 @@ class Login extends Component {
             value={username}
             onChange={this.handleChange}
             />
+        </div>
+
+        <label>Email</label>
+        <div className="control">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={this.handleChange}
+          />
         </div>
 
         <label>Password</label>
@@ -55,16 +63,11 @@ class Login extends Component {
         </div>
 
         <div className="submit">
-          <button type="submit" value="Login">Login</button>
+          <button type="submit" value="signup">Login</button>
         </div>
       </form>
     )
   }
 }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-  fetchUsers, },
-  dispatch)
-
-
-export default connect(null, mapDispatchToProps)(Login)
+export default (Signup)
