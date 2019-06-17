@@ -1,11 +1,8 @@
 export function fetchUsers() {
-  return(dispatch) => {
-    dispatch({type: 'LOADING_USERS'});
-    return fetch('/api/users').then(response => {
-      return response.json()
-    }).then(users => dispatch({
-      type: 'FETCH_USERS', payload: users
-    })
-    )
+  return (dispatch) => {
+    dispatch({type: 'LOAD_USERS' })
+    return fetch('http://localhost:3000/api/users')
+    .then(response => response.json())
+    .then(users => dispatch({ type: 'FETCH_USERS', payload: users }))
   }
 }

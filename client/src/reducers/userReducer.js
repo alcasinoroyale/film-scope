@@ -1,4 +1,4 @@
-export default function catsReducer(state = {
+export default function userReducer(state = {
   loading: false, users: []}, action) {
     switch(action.type) {
       case 'LOADING_USERS':
