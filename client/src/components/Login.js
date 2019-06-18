@@ -10,8 +10,10 @@ class Login extends Component {
       username: '',
       password: ''
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+  }
+
+  componentDidMount() {
+    this.props.fetchUsers()
   }
 
   handleChange = event => {
@@ -65,6 +67,5 @@ class Login extends Component {
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   fetchUsers, },
   dispatch)
-
 
 export default connect(null, mapDispatchToProps)(Login)
