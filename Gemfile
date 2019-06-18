@@ -32,6 +32,7 @@ gem 'foreman', '~> 0.82.0'
 gem 'active_model_serializers'
 gem 'bootstrap'
 gem 'faraday'
+gem 'rack-cors'
 gem 'dotenv-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

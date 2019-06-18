@@ -1,7 +1,8 @@
 class User < ApplicationRecord
+  has_secure_password
   validates :username, :email, :presence => true
   validates :username, :uniqueness => true
-  has_secure_password
+  validates :password, presence: true, allow_nil: true
   has_many :favorite_films
   has_many :films, through: :favorite_films
 end

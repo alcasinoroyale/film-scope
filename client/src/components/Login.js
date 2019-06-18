@@ -23,12 +23,16 @@ class Login extends Component {
     })
   }
 
+
   handleSubmit = event => {
     console.log(this.state)
     event.preventDefault();
   }
 
   render() {
+
+    console.log(this.props.fetchUsers)
+
     const { username, password } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
