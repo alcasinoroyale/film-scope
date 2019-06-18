@@ -1,7 +1,7 @@
 export default function userReducer(state = {
   loading: false, users: []}, action) {
     switch(action.type) {
-      case 'LOADING_USERS':
+      case 'LOAD_USERS':
         return { ...state, loading: true }
       case 'FETCH_USERS':
         return { ...state, loading: false, users: action.payload

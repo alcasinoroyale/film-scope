@@ -1,4 +1,4 @@
-export function fetchUsers() {
+export const fetchUsers = () => {
   return (dispatch) => {
     dispatch({type: 'LOAD_USERS' })
     return fetch('http://localhost:3000/api/users')

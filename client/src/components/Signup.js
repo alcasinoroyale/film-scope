@@ -7,7 +7,6 @@ class Signup extends Component {
       username: '',
       email: '',
       password: '',
-      confirmPassword: ''
     }
   }
 
@@ -20,7 +19,7 @@ class Signup extends Component {
 
   handleSubmit = event => {
     console.log(this.state)
-    event.preventDefault();
+    event.preventDefault()
   }
 
   render() {
