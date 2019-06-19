@@ -23,6 +23,18 @@ class Login extends Component {
       )
     })
 
+    const welcomeUser = () => {
+      if (this.props.activeUser) {
+        const username = this.props.activeUser.username
+        return (
+          <div>
+            <h4>Welcome {username} to Film Scope! The next app for film buffs.</h4>
+            <p>Access the films page to search for a variety of films from every genre and start building your list of favorites.</p>
+          </div>
+        )
+      }
+    }
+
     return (
         <div className="usersDropdown">
           <h3>Login Page</h3>
@@ -30,14 +42,16 @@ class Login extends Component {
             <option>Select Your Username</option>
             {mapUsers}
           </select>
-        </div>
+        <div>{welcomeUser()}</div>
+      </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    allUsers: state.user.allUsers
+    allUsers: state.user.allUsers,
+    activeUser: state.user.activeUser
   }
 }
 
