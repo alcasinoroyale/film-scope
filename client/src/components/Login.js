@@ -30,40 +30,8 @@ class Login extends Component {
   }
 
   render() {
-
-    console.log(this.props.fetchUsers)
-
-    const { username, password } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
         <h3>Login</h3>
-
-        <label>Username</label>
-        <div className="control">
-          <input
-            type="text"
-            name="username"
-            placeholder="Enter username"
-            value={username}
-            onChange={this.handleChange}
-            />
-        </div>
-
-        <label>Password</label>
-        <div className="control">
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={this.handleChange}
-          />
-        </div>
-
-        <div className="submit">
-          <button type="submit" value="Login">Login</button>
-        </div>
-      </form>
     )
   }
 }
