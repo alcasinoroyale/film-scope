@@ -1,19 +1,23 @@
 body {
-  background: #CA843A;
+  background-image: url("images/vintagefilm.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #3D2F1F;
 }
 
 .header {
-  color: #DF4C24;
+  color: #f2f2f2;
   letter-spacing: 20px;
   word-spacing: 60px;
   text-align: center;
+  text-shadow: 2px 2px #2b4048;
   font-family: 'Lato', sans-serif;
   background-image: url("images/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -210px;
   position: relative;
+  text-transform: uppercase;
   min-height: 340px;
 }
 

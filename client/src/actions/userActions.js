@@ -3,9 +3,7 @@ export function fetchUsers(username) {
   return (dispatch) => {
     dispatch({type: 'LOAD_USERS' })
     return fetch('/api/users')
-    .then(res => res.text())
-    .then(text => console.log(text))
-    .then(res => { return res.json()})
+    .then(response => response.json())
     .then(users => { return dispatch({ type: 'FETCH_USERS', payload: users })
     })
   }
