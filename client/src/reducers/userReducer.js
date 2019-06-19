@@ -1,12 +1,13 @@
-export default function userReducer(state = { users: [] }, action) {
+export default function userReducer(state =
+  { loading: false, allUsers: [], activeUser:null }, action) {
     switch(action.type) {
       case 'LOAD_USERS':
         return { ...state, loading: true }
       case 'FETCH_USERS':
-        return { ...state, loading: false, users: action.payload
+        return { ...state, loading: false, allUsers: action.payload
       }
       case 'BUILD_USER':
-          return { ...state }
+          return { ...state, activeUser: state.allUsers.find(user => user.id === action.payload.id) }
       default: return state;
   }
 }
