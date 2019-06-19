@@ -1,43 +1,32 @@
 import React, { Component } from 'react';
-import { fetchUsers } from '../actions/userActions';
+import { fetchUsers, buildUser } from '../actions/userActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-      password: ''
-    }
-  }
 
   componentDidMount() {
     this.props.fetchUsers()
   }
 
   handleChange = event => {
-    this.setState({
-      ...this.state,
-      [event.target.name]: event.target.value
-    })
-  }
-
-
-  handleSubmit = event => {
-    console.log(this.state)
-    event.preventDefault();
+    this.props.buildUser(event.target.value)
   }
 
   render() {
     return (
-        <h3>Login</h3>
+        <div className="usersDropdown">
+          <h3>Login Page</h3>
+          <select onChange={(event) => this.handleChange(event)}>
+            <option>Select Your Username</option>
+          </select>
+        </div>
     )
   }
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  fetchUsers, },
+  fetchUsers, buildUser },
   dispatch)
 
 export default connect(null, mapDispatchToProps)(Login)
