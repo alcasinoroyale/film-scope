@@ -7,7 +7,6 @@ import FavoritesContainer from './containers/FavoritesContainer';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup'
 import Login from './components/Login'
-
 const App = () => {
 
   return(
@@ -27,5 +26,4 @@ const App = () => {
     </div>
   )
 }
-
 export default App;
