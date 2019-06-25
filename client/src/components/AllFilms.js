@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class AllFilms extends Component {
   render() {
     return (
-      {this.props.activeUser}
+      <p>All films will be displayed here.</p>
     )
   }
 }

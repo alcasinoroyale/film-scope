@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup'
 import Login from './components/Login'
 const App = () => {
+const API_KEY = process.env.REACT_APP_FILM_API_KEY;
+console.log(API_KEY)
 
   return(
     <div className="App">
