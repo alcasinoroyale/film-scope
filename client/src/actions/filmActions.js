@@ -7,7 +7,7 @@ export function fetchFilms() {
     .then(res => {
         const film = res.data;
         return res.json() })
-    .then(films => { return dispatch({ type: 'FETCH_FILMS', payload: films })
+    .then(films => { return dispatch({ type: 'FETCH_FILMS', payload: films.data })
     })
   }
 }
