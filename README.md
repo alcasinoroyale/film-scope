@@ -1,4 +1,4 @@
-#Film Scope
+# Film Scope
 Film Scope is a react app with a rails API that gives users the ability to search for films in a variety of genres and create a list of favorites.
 
 ## Installation
