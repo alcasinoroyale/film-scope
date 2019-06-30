@@ -1,24 +1,30 @@
-# README
+#Film Scope
+Film Scope is a react app with a rails API that gives users the ability to search for films in a variety of genres and create a list of favorites.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
+Follow these instructions to start up the application.
 
-Things you may want to cover:
+1. Clone repository from GitHub
+$ git clone https://github.com/alcasinoroyale/film-scope.git
 
-* Ruby version
+2. CD into film-scope directory and install bundle
+$ cd film-scope && bundle install
 
-* System dependencies
+3. Migrate and seed database to implement users
+$ rake db:migrate && rake db:seed
 
-* Configuration
+4. CD into client directory and install dependencies
+$ cd client && npm install
 
-* Database creation
+5. Create an .env file to store the TMDB API Key
+$ touch .env
 
-* Database initialization
+6. If existing TMDB API Key doesn't work, you can receive one at themoviedb.org. Then set up the API KEY with REACT_APP_FILM_API_KEY = (fill in with your key chars) inside the .env file.
 
-* How to run the test suite
+7. Add the .env file to .gitignore so the API Key is hidden, filmActions.js is set to process this API KEY.
 
-* Services (job queues, cache servers, search engines, etc.)
+8. CD back into project directory and start the development server
+$ cd .. && rake start
 
-* Deployment instructions
-
-* ...
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/alcasinoroyale/film-scope. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
