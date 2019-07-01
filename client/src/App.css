@@ -66,5 +66,10 @@ form {
   color: #f2f2f2;
   display: inline;
   float: left;
-  padding: 20px 32px;
+  padding: 10px 20px;
+}
+
+.filmCard img {
+  border-radius: 8px;
+  border: 1px solid #9CB1B6;
 }

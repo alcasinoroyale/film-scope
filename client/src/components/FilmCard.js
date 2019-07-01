@@ -5,10 +5,8 @@ const FilmCard = props => {
   return (
     <div className="filmCard">
       <Link key={props.film.id} to={`/films/${props.film.id}`} >
-        <img alt="film poster" src={`https://image.tmdb.org/t/p/w200${props.film.poster_path}`} />
+        <img alt="film poster" src={`https://image.tmdb.org/t/p/w154${props.film.poster_path}`} />
       </Link>
-      <h4>{props.film.title}</h4>
-      <p>Release Date: {props.film.release_date}</p>
     </div>
   )
 }

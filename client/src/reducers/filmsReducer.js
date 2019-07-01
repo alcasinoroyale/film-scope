@@ -11,6 +11,10 @@ export default function filmsReducer(state = initialState, action) {
         return { ...state, loading: true }
       case 'FETCH_TOP_RATED':
         return { ...state, loading: false, allFilms: action.response.results }
+      case 'LOADING_FILM':
+        return { ...state, loading: true}
+      case 'DISPLAY_FILM':
+        return { ...state, loading: false}
       default: return state;
   }
 }

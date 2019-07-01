@@ -8,3 +8,15 @@ export function fetchTopRated(page) {
     .then(res => dispatch({ type: 'FETCH_TOP_RATED', response: res }))
   }
 }
+
+export function fetchFilm(id) {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_FILM' });
+    return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+    .then(res => res.json())
+    .then(film => dispatch({
+      type: 'DISPLAY_FILM',
+      filmInfo: film
+    }))
+  }
+}
