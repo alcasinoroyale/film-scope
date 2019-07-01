@@ -7,7 +7,7 @@ class FilmList extends Component {
       <React.Fragment>
       {this.props.films.map((film, index) => {
         return (
-          <FilmCard classes={this.props.classes} key={index} value={film} />
+          <FilmCard classes={this.props.classes} key={index} film={film} />
         )
       })}
       </React.Fragment>
@@ -17,7 +17,7 @@ class FilmList extends Component {
   render() {
     return (
       <>
-        {this.renderFilms}()}
+      {this.renderFilms()}
       </>
     )
   }
