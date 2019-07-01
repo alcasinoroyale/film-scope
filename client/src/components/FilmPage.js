@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { fetchFilm } from '../actions/filmActions'
 
-const FilmPage = props => {
-  return (
-    <div className="filmInfo">
-    </div>
-  )
+class FilmPage extends Component {
+  render() {
+    return (
+      <div className="filmInfo">
+        <h2>Film Title:</h2>
+      </div>
+    )
+  }
 }
 
 export default FilmPage
