@@ -11,10 +11,6 @@ const FilmsContainer = () => {
       </div>
 
       <div>
-        <h2>All Films Page</h2>
-      </div>
-
-      <div>
         <AllFilms />
       </div>
 
