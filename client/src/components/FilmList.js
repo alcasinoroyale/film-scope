@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 
 class FilmList extends Component {
+  renderFilms() {
+    return (
+      <React.Fragment>
+      {this.props.films.map((film, index) => {
+        return (
+          <FilmCard classes={this.props.classes} key={index} value={film} />
+        )
+      })}
+      </React.Fragment>
+    )
+  }
+
   render() {
     return (
-      <p>Display the Film List</p>
+      <>
+        {this.renderFilms}()}
+      </>
     )
   }
 }
