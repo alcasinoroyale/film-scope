@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchTopRated } from '../actions/filmActions'
+import FilmCard from '../components/FilmCard'
 import { connect } from 'react-redux';
 
 class TopRated extends Component {
@@ -10,20 +11,21 @@ class TopRated extends Component {
 
   render() {
     return (
-      <>
       <div className="filmsList">
         <h1>Top Rated Films</h1>
-        <div className="filmContent">
-        </div>
+          {this.props.films.map((film, index) => {
+            return (
+              <FilmCard key={index} film={film} />
+            )
+          })}
       </div>
-      </>
     )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    films: state.films.allFilms,
+    films: state.films.topRated.films,
     currentPage: state.films.currentPage,
     totalPages: state.films.totalPages
   }

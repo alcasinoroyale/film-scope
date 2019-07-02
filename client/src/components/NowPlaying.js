@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchNowPlaying } from '../actions/filmActions'
+import FilmCard from '../components/FilmCard'
 import { connect } from 'react-redux';
 
 class NowPlaying extends Component {
@@ -10,13 +11,11 @@ class NowPlaying extends Component {
 
   render() {
     return (
-      <>
       <div className="filmsList">
         <h1>Now Playing in Theatres</h1>
         <div className="filmContent">
         </div>
       </div>
-      </>
     )
   }
 }
