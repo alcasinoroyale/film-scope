@@ -73,3 +73,13 @@ form {
   border-radius: 8px;
   border: 1px solid #9CB1B6;
 }
+
+.nowPlaying {
+  float: left;
+}
+
+h1 {
+  color: #f2f2f2;
+  text-shadow: 2px 2px #2b4048;
+  font-family:
+}
