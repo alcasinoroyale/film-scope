@@ -9,12 +9,15 @@ class NowPlaying extends Component {
     fetchNowPlaying(this.props.currentPage)(this.props.dispatch)
   }
 
-  render() {
+    render() {
     return (
-      <div className="filmsList">
+      <div className="nowPlaying">
         <h1>Now Playing in Theatres</h1>
-        <div className="filmContent">
-        </div>
+          {this.props.films.map((film, index) => {
+            return (
+              <FilmCard key={index} film={film} />
+            )
+          })}
       </div>
     )
   }
@@ -22,7 +25,7 @@ class NowPlaying extends Component {
 
 const mapStateToProps = state => {
   return {
-    films: state.films.allFilms,
+    films: state.films.nowPlaying.films,
     currentPage: state.films.currentPage,
     totalPages: state.films.totalPages
   }

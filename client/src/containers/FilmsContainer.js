@@ -18,6 +18,7 @@ const FilmsContainer = () => {
       <div>
         <NowPlaying />
       </div>
+      
     </div>
   )
 }
