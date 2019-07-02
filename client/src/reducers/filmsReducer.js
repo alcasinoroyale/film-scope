@@ -1,12 +1,20 @@
 const initialState = {
   loading: false,
-  allFilms: [],
-  nowPlaying: [],
+  currentPage: 1,
+  totalPages: null,
+  topRated: {
+    films:[],
+    currentPage: 1,
+    totalPages: null
+  },
+  nowPlaying: {
+    films: [],
+    currentPage: 1,
+    totalPages: null
+  },
   film: {
     filmInfo: {}
   },
-  currentPage: 1,
-  totalPages: null
 }
 
 export default function filmsReducer(state = initialState, action) {

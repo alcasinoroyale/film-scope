@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import TopRated from '../components/TopRated';
+import NowPlaying from '../components/NowPlaying';
 
 const FilmsContainer = () => {
   return (
@@ -14,6 +15,9 @@ const FilmsContainer = () => {
         <TopRated />
       </div>
 
+      <div>
+        <NowPlaying />
+      </div>
     </div>
   )
 }
