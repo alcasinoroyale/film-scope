@@ -20,3 +20,12 @@ export function fetchFilm(id) {
     }))
   }
 }
+
+export function fetchNowPlaying(page) {
+  return (dispatch) => {
+    dispatch({ type: 'FETCH_NOW_PLAYING' });
+    return fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${page}`)
+    .then(res => res.json())
+    .then(res => dispatch({ type: 'DISPLAY_NOW_PLAYING', response: res }))
+  }
+}

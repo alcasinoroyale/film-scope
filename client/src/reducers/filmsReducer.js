@@ -1,6 +1,7 @@
 const initialState = {
   loading: false,
   allFilms: [],
+  nowPlaying: [],
   film: {
     filmInfo: {}
   },
@@ -18,6 +19,10 @@ export default function filmsReducer(state = initialState, action) {
         return { ...state, loading: true}
       case 'DISPLAY_FILM':
         return { ...state, loading: false, film: { filmInfo: action.filmInfo }}
+      case 'FETCH_NOW_PLAYING':
+        return { ...state, loading: true }
+      case 'DISPLAY_NOW_PLAYING':
+        return { ...state, loading: false, nowPlaying: action.response.results }
       default: return state;
   }
 }
