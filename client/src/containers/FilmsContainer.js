@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import AllFilms from '../components/AllFilms';
+import TopRated from '../components/TopRated';
 
 const FilmsContainer = () => {
   return (
@@ -11,7 +11,7 @@ const FilmsContainer = () => {
       </div>
 
       <div>
-        <AllFilms />
+        <TopRated />
       </div>
 
     </div>

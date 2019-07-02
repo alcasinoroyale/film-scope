@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { fetchTopRated } from '../actions/filmActions'
-import FilmList from '../components/FilmList'
 import { connect } from 'react-redux';
 
-class AllFilms extends Component {
+class TopRated extends Component {
 
   componentDidMount() {
     fetchTopRated(this.props.currentPage)(this.props.dispatch)
@@ -15,7 +14,6 @@ class AllFilms extends Component {
       <div className="filmsList">
         <h1>Top Rated Films</h1>
         <div className="filmContent">
-          <FilmList films={this.props.films} />
         </div>
       </div>
       </>
@@ -31,4 +29,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(AllFilms)
+export default connect(mapStateToProps)(TopRated)
