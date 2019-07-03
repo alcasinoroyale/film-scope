@@ -19,6 +19,7 @@ class Signup extends Component {
 
   handleSubmit = event => {
     console.log(this.state)
+    alert('A new user was created: ' + this.state.username);
     event.preventDefault()
   }
 
@@ -62,7 +63,7 @@ class Signup extends Component {
         </div>
 
         <div className="submit">
-          <button type="submit" value="signup">Login</button>
+          <button type="submit" value="signup">Sign Up</button>
         </div>
       </form>
     )

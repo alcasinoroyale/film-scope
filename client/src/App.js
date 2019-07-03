@@ -6,6 +6,7 @@ import FilmsContainer from './containers/FilmsContainer';
 import FavoritesContainer from './containers/FavoritesContainer';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup'
+import FilmPage from './components/FilmPage'
 import Login from './components/Login'
 const App = () => {
 const API_KEY = process.env.REACT_APP_FILM_API_KEY;
@@ -21,6 +22,7 @@ console.log(API_KEY)
           <Route exact path="/" component={Home}/>
           <Route exact path="/films" component={FilmsContainer}/>
           <Route exact path="/favorites" component={FavoritesContainer} />
+          <Route exact path="/films/:id" component={FilmPage} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
         </Router>
