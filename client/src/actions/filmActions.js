@@ -12,7 +12,7 @@ export function fetchTopRated(page) {
 export function fetchFilm(id) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_FILM' });
-    return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}}&append_to_response=credits`)
+    return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=credits`)
     .then(res => res.json())
     .then(film => dispatch({
       type: 'DISPLAY_FILM',

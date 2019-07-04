@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchFilm } from '../actions/filmActions'
+import LoadFilm from '../components/LoadFilm'
 import { connect } from 'react-redux';
 
 class FilmInfo extends Component {
@@ -11,7 +12,11 @@ class FilmInfo extends Component {
   render() {
     return (
       <div className="filmInfo">
-        <h2>Film Title:</h2>
+        <LoadFilm film={this.props.film} />
+          <h1>{this.props.film.title}</h1>
+          <p>{this.props.film.tagline}</p>
+          <p>Release Date: {this.props.film.release_date}</p>
+          <p>Runtime: {this.props.film.runtime} Minutes</p>
       </div>
     )
   }
