@@ -11,7 +11,11 @@ const initialState = {
     totalPages: null
   },
   film: {
-    filmInfo: {}
+    filmInfo: {},
+    credits: {
+      cast: [],
+    genres: [],
+    }
   },
   currentPage: 1,
   totalPages: null,
@@ -32,7 +36,13 @@ export default function filmsReducer(state = initialState, action) {
       case 'LOADING_FILM':
         return { ...state, loading: true}
       case 'DISPLAY_FILM':
-        return { ...state, loading: false, film: { filmInfo: action.filmInfo }}
+        return { ...state, loading: false,
+          film: {
+            filmInfo: action.filmInfo,
+            credits: action.filmInfo.credits,
+            genres: action.filmInfo.genres
+          }
+        }
 
       case 'FETCH_NOW_PLAYING':
         return { ...state, loading: true }
