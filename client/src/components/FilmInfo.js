@@ -14,9 +14,22 @@ class FilmInfo extends Component {
       <div className="filmInfo">
         <LoadFilm film={this.props.film} />
           <h1>{this.props.film.title}</h1>
-          <p>{this.props.film.tagline}</p>
+          <h3>{this.props.film.tagline}</h3>
+          <img src={`https://image.tmdb.org/t/p/w342${this.props.film.poster_path}`} alt="poster" />
+          <div className="moreInfo">
+          <h3>Details</h3>
           <p>Release Date: {this.props.film.release_date}</p>
           <p>Runtime: {this.props.film.runtime} Minutes</p>
+          <p>Genres: {this.props.genres.map((genre, index) => {
+            return genre.name
+          }).join(", ")}</p>
+          <h3>Synopsis</h3>
+          <p>{this.props.film.overview}</p>
+          <h3>Cast</h3>
+          <p>{this.props.credits.cast.map((cast, index) => {
+            return cast.name
+          }).join(" * ")}</p>
+        </div>
       </div>
     )
   }

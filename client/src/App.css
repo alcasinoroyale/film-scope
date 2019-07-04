@@ -87,4 +87,10 @@ h1 {
 .filmInfo {
   padding-left: 20px;
   color: #f2f2f2;
+  column-count: 2;
+  width: 62%;
+}
+
+.moreInfo {
+  padding-top: 16%;
 }

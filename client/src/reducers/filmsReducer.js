@@ -12,9 +12,9 @@ const initialState = {
   },
   film: {
     filmInfo: {},
+    genres: [],
     credits: {
       cast: [],
-    genres: [],
     }
   },
   currentPage: 1,
