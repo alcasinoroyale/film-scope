@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Favorites from '../components/Favorites';
 
 const FavoritesContainer = () => {
   return (
@@ -8,7 +9,7 @@ const FavoritesContainer = () => {
         <Header />
       </div>
       <div>
-        <h2>Your Favorites</h2>
+        <Favorites />
       </div>
     </div>
   )
