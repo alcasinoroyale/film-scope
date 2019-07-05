@@ -46,8 +46,22 @@ body {
   margin-top: 10px;
 }
 
+h1 {
+  color: #f2f2f2;
+  text-shadow: 2px 2px #2b4048;
+}
+
 h2 {
   padding-left: 20px;
+}
+
+h3 {
+  padding-left: 20px;
+}
+
+h4 {
+  padding-left: 20px;
+  color: #f2f2f2;
 }
 
 .control {
@@ -76,12 +90,6 @@ form {
 
 .nowPlaying {
   float: left;
-}
-
-h1 {
-  color: #f2f2f2;
-  text-shadow: 2px 2px #2b4048;
-  font-family:
 }
 
 .filmInfo {

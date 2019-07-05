@@ -7,9 +7,10 @@ class Favorites extends Component {
     if (this.props.activeUser) {
       return (
       <div>
-        {this.props.activeUser.username}
+        <h2>{this.props.activeUser.username}'s Profile</h2>
+          <h4>{this.props.activeUser.bio}</h4>
         <div className="favorites">
-          <h2>Your Favorite Films</h2>
+          <h3>Your Favorite Films</h3>
         </div>
 
       </div>
