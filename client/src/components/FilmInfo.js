@@ -26,8 +26,8 @@ class FilmInfo extends Component {
           <h3>Synopsis</h3>
           <p>{this.props.film.overview}</p>
           <h3>Cast</h3>
-          <p>{this.props.credits.cast.map((cast, index) => {
-            return cast.name
+          <p>{this.props.credits.cast.slice(0, 20).map((cast, index) => {
+            return `${cast.name} as ${cast.character}`
           }).join(" * ")}</p>
         </div>
       </div>
