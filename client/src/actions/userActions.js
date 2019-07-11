@@ -27,3 +27,19 @@ export const buildUser = id => {
     })
   }
 }
+
+export const addtoFavorites = (film, user) => {
+  console.log(film)
+  let id = user.id
+  let data = {
+    method: 'POST'
+  }
+  return (dispatch) => {
+    fetch (`/api/users/${id}/add_favorites`, data)
+    .then(resp => resp.json())
+    .then(films => dispatch({
+      type: 'ADD_TO_FAVORITES',
+      payload: films
+    }))
+  }
+}
