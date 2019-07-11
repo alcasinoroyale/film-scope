@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchFilm } from '../actions/filmActions'
 import LoadFilm from '../components/LoadFilm'
+import AddFavorites from '../components/AddFavorites'
 import { connect } from 'react-redux';
 
 class FilmInfo extends Component {
@@ -17,6 +18,7 @@ class FilmInfo extends Component {
           <h3>{this.props.film.tagline}</h3>
           <img src={`https://image.tmdb.org/t/p/w342${this.props.film.poster_path}`} alt="poster" />
           <div className="moreInfo">
+          <AddFavorites />
           <h3>Details</h3>
           <p>Release Date: {this.props.film.release_date}</p>
           <p>Runtime: {this.props.film.runtime} Minutes</p>
