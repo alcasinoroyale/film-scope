@@ -28,8 +28,8 @@ class Login extends Component {
         const username = this.props.activeUser.username
         return (
           <div>
-            <h4>Welcome {username} to Film Scope! The next app for film buffs.</h4>
-            <p>Access the films page to search for a variety of films from every genre and start building your list of favorites.</p>
+            <h3>Welcome {username} to Film Scope! The next app for film buffs.</h3>
+            <h4>Access the films page to search for a variety of films and start building your list of favorites.</h4>
           </div>
         )
       }
@@ -37,7 +37,7 @@ class Login extends Component {
 
     return (
         <div className="usersDropdown">
-          <h3>Login Page</h3>
+          <h2>Login Page</h2>
           <select onChange={(event) => this.handleChange(event)}>
             <option>Select Your Username</option>
             {mapUsers}
