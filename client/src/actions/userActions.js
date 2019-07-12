@@ -28,7 +28,7 @@ export const buildUser = id => {
   }
 }
 
-export const addtoFavorites = (film, user) => {
+export const addToFavorites = (film, user) => {
   console.log(film)
   let id = user.id
   let data = {

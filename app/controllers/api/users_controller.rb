@@ -32,6 +32,6 @@ class Api::UsersController < ApplicationController
   end
 
   def film_params
-    params.require(:film).permit(:title, :genre, :description)
+    params.require(:film).permit(:title, :id)
   end
 end

@@ -141,3 +141,8 @@ form {
   font-family: 'Lato', sans-serif;
   padding: 0px 30px;
 }
+
+.login-link {
+  text-decoration: none;
+  color: #560F0F;
+}

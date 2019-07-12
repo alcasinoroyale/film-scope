@@ -11,6 +11,7 @@ class FilmInfo extends Component {
   }
 
   render() {
+    console.log(this.props.film)
     return (
       <div className="filmInfo">
         <LoadFilm film={this.props.film} />

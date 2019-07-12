@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
     resources :users do
       get '/favorites' => 'users#favoritefilms'
-      post '/favorite/:id' => 'users#add_favorites'
+      post :add_favorites, on: :member
     end
 
     resources :films do

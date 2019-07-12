@@ -17,7 +17,7 @@ class Favorites extends Component {
       )
     } else {
       return (
-        <h4>Please <Link to="/login">Login</Link> to View Favorites</h4>
+        <h3>Please <Link className="login-link" to="/login">Login</Link> to View Favorites</h3>
       )
     }
   }
