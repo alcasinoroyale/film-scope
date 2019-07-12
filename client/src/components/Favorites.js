@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 class Favorites extends Component {
   render() {
+    console.log(this.props.activeUser)
     if (this.props.activeUser) {
       return (
       <div>
@@ -11,6 +12,13 @@ class Favorites extends Component {
           <h4>{this.props.activeUser.bio}</h4>
         <div className="favorites">
           <h3>Your Favorite Films</h3>
+          <ol>
+          {this.props.activeUser.films.map((film, index) =>
+                <div key={film.id}>
+                <li><h4>{film.title}</h4></li>
+                </div>
+              )}
+          </ol>
         </div>
 
       </div>
@@ -25,7 +33,8 @@ class Favorites extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    activeUser: state.user.activeUser
+    activeUser: state.user.activeUser,
+    film: state.films.film.filmInfo
   }
 }
 

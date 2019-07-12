@@ -1,4 +1,4 @@
 class FilmSerializer < ActiveModel::Serializer
-  attributes :title, :genre, :film_id, :description
-  has_many :users, through: :favorite_films
+  attributes :title, :id
+  has_many :favorited_by, through: :favorite_films, source: :user
 end

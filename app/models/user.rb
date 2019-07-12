@@ -4,5 +4,5 @@ class User < ApplicationRecord
   validates :username, :uniqueness => true
   validates :password, presence: true, allow_nil: true
   has_many :favorite_films
-  has_many :films, through: :favorite_films
+  has_many :films, through: :favorite_films, source: :film
 end

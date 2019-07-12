@@ -32,7 +32,11 @@ export const addToFavorites = (film, user) => {
   console.log(film)
   let id = user.id
   let data = {
-    method: 'POST'
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ film: film })
   }
   return (dispatch) => {
     fetch (`/api/users/${id}/add_favorites`, data)

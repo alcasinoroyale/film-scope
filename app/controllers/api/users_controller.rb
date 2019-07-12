@@ -14,15 +14,15 @@ class Api::UsersController < ApplicationController
   end
 
   def favorite_films
-    films = user.favorite_films
+    films = user.films
     render json: films
   end
 
   def add_favorites
     user = User.find(params[:id])
     film = Film.find_or_create_by(film_params)
-    user.favorite_films << film unless user.favorite_films.include?(film)
-    render json: user.favorite_films
+    user.films << film unless user.films.include?(film)
+    render json: user.films
   end
 
   private

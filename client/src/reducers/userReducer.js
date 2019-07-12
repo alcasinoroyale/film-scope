@@ -9,7 +9,7 @@ export default function userReducer(state =
       case 'BUILD_USER':
           return { ...state, activeUser: state.allUsers.find(user => user.id === action.payload.id) }
       case 'ADD_TO_FAVORITES':
-          return { ...state, activeUser: { ...state.activeUser, favoriteFilms: action.payload }}
+          return { ...state, activeUser: { ...state.activeUser, films: action.payload }}
       default: return state;
   }
 }
