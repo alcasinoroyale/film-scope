@@ -7,8 +7,8 @@ body {
 
 .header {
   color: #f2f2f2;
-  letter-spacing: 20px;
-  word-spacing: 60px;
+  letter-spacing: 16px;
+  word-spacing: 30px;
   text-align: center;
   text-shadow: 2px 2px #2b4048;
   font-family: 'Lato', sans-serif;
@@ -19,6 +19,11 @@ body {
   position: relative;
   text-transform: uppercase;
   min-height: 340px;
+}
+
+.header h2 {
+  margin-top: 270px;
+  margin-left: 200px;
 }
 
 .footer a {

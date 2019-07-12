@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2019_07_05_221733) do
     t.integer "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "url"
   end
 
   create_table "users", force: :cascade do |t|

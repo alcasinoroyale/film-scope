@@ -8,6 +8,10 @@ const Home = () => {
       <div>
         <Header />
       </div>
+      <div className="taglines">
+        <h2>Explore The Film Collection</h2>
+        <h2>Create Your List of Favorites</h2>
+      </div>
       <div>
         <Footer />
       </div>
