@@ -20,6 +20,7 @@ class FilmInfo extends Component {
           <img src={`https://image.tmdb.org/t/p/w342${this.props.film.poster_path}`} alt="poster" />
           <div className="moreInfo">
           <AddFavorites />
+          <a class="see-more" href={`https://www.themoviedb.org/movie/${this.props.film.id}`} target="_blank" rel="noopener noreferrer">See More</a>
           <h3>Details</h3>
           <p>Release Date: {this.props.film.release_date}</p>
           <p>Runtime: {this.props.film.runtime} Minutes</p>
