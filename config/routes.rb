@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :users do
       get '/favorites' => 'users#favoritefilms'
       post :add_favorites, on: :member
+      post :remove_from_favorites, on: :member
     end
 
     resources :films do

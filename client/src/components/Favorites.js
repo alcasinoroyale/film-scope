@@ -11,7 +11,7 @@ class Favorites extends Component {
         <h2>{this.props.activeUser.username}'s Profile</h2>
           <h4>{this.props.activeUser.bio}</h4>
         <div className="favorites">
-          <h3>Your Favorite Films</h3>
+          <h3>{this.props.activeUser.username}'s Favorite Films</h3>
           <ol>
           {this.props.activeUser.films.map((film, index) =>
                 <div key={film.id}>

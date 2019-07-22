@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { addToFavorites } from '../actions/userActions'
+import { addToFavorites, removeFromFavorites } from '../actions/userActions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -8,6 +8,7 @@ class AddFavorites extends Component {
     return (
       <div>
       <button className="favorite_films" onClick={() => this.props.addToFavorites(this.props.film, this.props.activeUser)}>Add To Favorites</button>
+      <button className="favorite_films" onClick={() => this.props.removeFromFavorites(this.props.film, this.props.activeUser)}>Remove From Favorites</button>
       </div>
     )
   }
@@ -21,7 +22,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  addToFavorites
+  addToFavorites, removeFromFavorites
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddFavorites)

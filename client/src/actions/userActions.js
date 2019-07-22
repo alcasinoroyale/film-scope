@@ -47,3 +47,23 @@ export const addToFavorites = (film, user) => {
     }))
   }
 }
+
+export const removeFromFavorites = (film, user) => {
+  console.log(film)
+  let id = user.id
+  let data = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ film: film })
+  }
+  return (dispatch) => {
+    fetch (`/api/users/${id}/remove_from_favorites`, data)
+    .then(resp => resp.json())
+    .then(films => dispatch({
+      type: 'REMOVE_FROM_FAVORITES',
+      payload: films
+    }))
+  }
+}

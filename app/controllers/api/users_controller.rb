@@ -25,6 +25,13 @@ class Api::UsersController < ApplicationController
     render json: user.films
   end
 
+  def remove_from_favorites
+    user = User.find(params[:id])
+    film = Film.find_by(title: params[:film][:title])
+    user.films.delete(film)
+    render json: user.films
+  end
+  
   private
 
   def user_params
