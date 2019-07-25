@@ -9,6 +9,7 @@ class AddFavorites extends Component {
     return (
       <div>
         <button className="favorite_films" onClick={() => this.props.addToFavorites(this.props.film, this.props.activeUser)}>Add To Favorites</button>
+        <div className="divide" />
         <button className="favorite_films" onClick={() => this.props.removeFromFavorites(this.props.film, this.props.activeUser)}>Remove From Favorites</button>
       </div>
       )

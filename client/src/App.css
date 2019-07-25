@@ -172,3 +172,9 @@ form {
   height: 20px;
   font-size: 16px;
 }
+
+.divide {
+  width: 10px;
+  height: auto;
+  display: inline-block;
+}
