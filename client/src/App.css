@@ -3,6 +3,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 .header {
@@ -119,6 +125,7 @@ form {
   width: 62%;
 }
 
+
 .filmInfo img {
   border-radius: 10px;
   border: 2px solid #000000;
@@ -128,12 +135,21 @@ form {
   padding-top: 16%;
 }
 
+.moreInfo h3 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
 .favorite_films {
   background-color: #1C2526;
   border: none;
   color: #f2f2f2;
   font-weight: bold;
   font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .see-more {

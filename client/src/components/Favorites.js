@@ -15,7 +15,7 @@ class Favorites extends Component {
           <ol>
           {this.props.activeUser.films.map((film, index) =>
                 <div key={film.id}>
-                <li><h4>{film.title}</h4></li>
+                <li><Link className="link" to={`films/${film.id}`}><h4>{film.title}</h4></Link></li>
                 </div>
               )}
           </ol>
