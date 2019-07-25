@@ -15,6 +15,9 @@ const initialState = {
     genres: [],
     credits: {
       cast: [],
+    },
+    search: {
+      results: []
     }
   },
   currentPage: 1,
@@ -52,6 +55,11 @@ export default function filmsReducer(state = initialState, action) {
           page: action.currentPage,
           totalPages: action.response.total_pages
         }
+
+      case 'LOADING_SEARCH':
+        return { ...state, loading: true}
+      case 'DISPLAY_RESULTS':
+        return { ...state, loading: false, search: { results: action.response.results }}
 
       default: return state;
   }

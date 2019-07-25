@@ -29,3 +29,12 @@ export function fetchNowPlaying(page) {
     .then(res => dispatch({ type: 'DISPLAY_NOW_PLAYING', response: res }))
   }
 }
+
+export function searchFilm(query) {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SEARCH' });
+    return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`)
+    .then(res => res.json())
+    .then(res => dispatch({ type: 'DISPLAY_RESULTS', response: res }))
+  }
+}
