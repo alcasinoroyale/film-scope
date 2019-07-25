@@ -105,6 +105,7 @@ form {
 .filmCard img {
   border-radius: 8px;
   border: 1px solid #9CB1B6;
+  height: 236px;
 }
 
 .nowPlaying {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../components/Search';
-import LoadFilm from '../components/LoadFilm';
+import Results from '../components/Results';
 import { searchFilm } from '../actions/filmActions'
 import { connect } from 'react-redux';
 
@@ -15,7 +15,7 @@ class SearchContainer extends Component {
     <div>
       <div>
         <Search handleSubmit={this.handleSubmit} />
-        <LoadFilm films={this.props.films} />
+        <Results films={this.props.films} />
       </div>
     </div>
     )
