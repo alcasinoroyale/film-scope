@@ -154,3 +154,11 @@ form {
   text-decoration: none;
   color: #560F0F;
 }
+
+.search-link {
+  font-size: 24px;
+  margin-right: 40px;
+  color: #f2f2f2;
+  text-decoration: none;
+  float: right
+}
