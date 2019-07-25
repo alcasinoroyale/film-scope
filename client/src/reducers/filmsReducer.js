@@ -15,10 +15,10 @@ const initialState = {
     genres: [],
     credits: {
       cast: [],
-    },
-    search: {
-      results: []
     }
+  },
+  search: {
+    results: []
   },
   currentPage: 1,
   totalPages: null,
