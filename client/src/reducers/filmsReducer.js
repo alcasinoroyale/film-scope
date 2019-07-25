@@ -15,6 +15,7 @@ const initialState = {
     genres: [],
     credits: {
       cast: [],
+      crew: [],
     }
   },
   search: {

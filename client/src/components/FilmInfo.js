@@ -21,6 +21,8 @@ class FilmInfo extends Component {
           <div className="moreInfo">
           <AddFavorites />
           <h3>Details</h3>
+          <p>Director: {this.props.credits.crew.slice(0, 1).map((crew, index) => {
+            return `${crew.name}`})}</p>
           <p>Release Date: {this.props.film.release_date}</p>
           <p>Runtime: {this.props.film.runtime} Minutes</p>
           <p>Genres: {this.props.genres.map((genre, index) => {

@@ -14,6 +14,7 @@ class SearchContainer extends Component {
   return (
     <div>
       <div>
+        <h3>Search For Your Favorite Films</h3>
         <Search handleSubmit={this.handleSubmit} />
         <Results films={this.props.films} />
       </div>
