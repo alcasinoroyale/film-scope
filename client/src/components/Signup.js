@@ -6,13 +6,13 @@ class Signup extends Component {
     this.state = {
       username: '',
       email: '',
+      bio: '',
       password: '',
     }
   }
 
   handleChange = event => {
     this.setState({
-      ...this.state,
       [event.target.name]: event.target.value
     })
   }
@@ -24,7 +24,7 @@ class Signup extends Component {
   }
 
   render() {
-    const { username, email, password } = this.state;
+    const { username, email, bio, password } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <h3>Sign Up</h3>
@@ -47,6 +47,17 @@ class Signup extends Component {
             name="email"
             placeholder="Enter email"
             value={email}
+            onChange={this.handleChange}
+          />
+        </div>
+
+        <label>Bio</label>
+        <div className="control">
+          <input
+            type="text"
+            name="bio"
+            placeholder="Enter bio"
+            value={bio}
             onChange={this.handleChange}
           />
         </div>

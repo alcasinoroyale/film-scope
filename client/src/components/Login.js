@@ -28,7 +28,7 @@ class Login extends Component {
         const username = this.props.activeUser.username
         return (
           <div>
-            <h3>Welcome {username} to Film Scope! The next app for film buffs.</h3>
+            <h3>Welcome {username} to Reel 2 Real! The next app for film buffs.</h3>
             <h4>Access the films page to search for a variety of films and start building your list of favorites.</h4>
           </div>
         )

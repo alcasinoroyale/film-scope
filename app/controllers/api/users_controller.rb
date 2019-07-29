@@ -6,6 +6,11 @@ class Api::UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
+    if save
+      render json: user
+    else
+      render json: user.errors.full_messages
+    end
   end
 
   def show
@@ -31,7 +36,7 @@ class Api::UsersController < ApplicationController
     user.films.delete(film)
     render json: user.films
   end
-  
+
   private
 
   def user_params
