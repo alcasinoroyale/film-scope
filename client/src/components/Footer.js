@@ -6,8 +6,9 @@ class Footer extends Component {
   render() {
   if (this.props.activeUser) {
   return (
-    <div>
-      <h3>You are logged in as {this.props.activeUser.username}</h3>
+    <div className="active-user-box">
+      <h3>You are logged in as {this.props.activeUser.username} ----
+      <NavLink className="change-user" to="/login" exact> Change User</NavLink></h3>
     </div>
     )
   } else {
