@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Signup extends Component {
   constructor(props) {
@@ -18,9 +19,28 @@ class Signup extends Component {
   }
 
   handleSubmit = event => {
-    console.log(this.state)
-    alert('A new user was created: ' + this.state.username);
     event.preventDefault()
+    console.log(this.state)
+    const { username, email, bio, password } = this.state
+    axios.post('api/users', {
+      user: {
+        username: username,
+        email: email,
+        bio: bio,
+        password: password
+      }
+    },
+      { withCredentials: true }
+    )
+      .then(response => {
+        console.log('signup res', response)
+        window.alert('Your account has been successfully created!')
+        window.location.href = '/login'
+      })
+      .catch(error => {
+        console.log("signup error", error)
+        window.alert('There was trouble creating your account.')
+    });
   }
 
   render() {
@@ -37,6 +57,7 @@ class Signup extends Component {
             placeholder="Enter username"
             value={username}
             onChange={this.handleChange}
+            required
             />
         </div>
 
@@ -48,6 +69,7 @@ class Signup extends Component {
             placeholder="Enter email"
             value={email}
             onChange={this.handleChange}
+            required
           />
         </div>
 
@@ -59,6 +81,7 @@ class Signup extends Component {
             placeholder="Enter bio"
             value={bio}
             onChange={this.handleChange}
+            required
           />
         </div>
 
@@ -70,6 +93,7 @@ class Signup extends Component {
             placeholder="Enter password"
             value={password}
             onChange={this.handleChange}
+            required
           />
         </div>
 
