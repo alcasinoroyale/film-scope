@@ -1,41 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import { buildUser } from '../actions/userActions';
 import { Link } from 'react-router-dom'
 
-class Favorites extends Component {
-  render() {
-    console.log(this.props.activeUser)
-    if (this.props.activeUser) {
-      return (
-      <div>
-        <h2>{this.props.activeUser.username}'s Profile</h2>
-          <h4>{this.props.activeUser.bio}</h4>
-        <div className="favorites">
-          <h3>{this.props.activeUser.username}'s Favorite Films</h3>
-          <ol>
-          {this.props.activeUser.films.map((film, index) =>
-                <div key={film.id}>
-                <li><Link className="link" to={`films/${film.id}`}><h4>{film.title}</h4></Link></li>
-                </div>
-              )}
-          </ol>
-        </div>
-
-      </div>
-      )
-    } else {
+const Favorites = ({ activeUser, film}) => {
+  console.log({activeUser})
+    if (!activeUser) {
       return (
         <h3>Please <Link className="login-link" to="/login">Login</Link> to View Favorites</h3>
       )
     }
-  }
-}
+  return (
+      <div>
+        <h2>{activeUser.username}'s Profile</h2>
+        <h4>{activeUser.bio}</h4>
+        <div className="favorites">
+          <h3>{activeUser.username}'s Favorite Films</h3>
+          <ol>
+          {activeUser.films.map(film =>
+            <div key={film.id}>
+              <li><Link className="link" to={`films/${film.id}`}><h4>{film.title}</h4></Link></li>
+            </div>
+            )}
+          </ol>
+        </div>
+      </div>
+    )
+}
 
 const mapStateToProps = (state) => {
   return {
     activeUser: state.user.activeUser,
-    film: state.films.film.filmInfo
   }
 }
 
-export default connect(mapStateToProps)(Favorites)
+export default connect(mapStateToProps, { buildUser} )(Favorites)
