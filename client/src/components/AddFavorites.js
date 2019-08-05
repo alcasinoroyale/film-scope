@@ -5,17 +5,23 @@ import { bindActionCreators } from 'redux'
 
 class AddFavorites extends Component {
   render() {
-    if (this.props.activeUser) {
-    return (
+    console.log(this.props.activeUser)
+    if (this.props.activeUser && this.props.activeUser.films.some(film => film.id === this.props.film.id)) {
+      return (
       <div>
-        <button className="favorite_films" onClick={() => this.props.addToFavorites(this.props.film, this.props.activeUser)}>Add To Favorites</button>
-        <div className="divide" />
         <button className="favorite_films" onClick={() => this.props.removeFromFavorites(this.props.film, this.props.activeUser)}>Remove From Favorites</button>
       </div>
       )
+    } else if (this.props.activeUser){
+      return (
+        <div>
+          <button className="favorite_films" onClick={() => this.props.addToFavorites(this.props.film, this.props.activeUser)}>Add To Favorites</button>
+        </div>
+      )
     } else {
       return (
-        <div></div>
+        <div>
+        </div>
       )
     }
   }
