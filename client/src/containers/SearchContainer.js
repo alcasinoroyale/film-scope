@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 class SearchContainer extends Component {
 
   handleSubmit = query => {
-    searchFilm(query)(this.props.dispatch)
+    this.props.searchFilm(query)
   }
 
   render() {
@@ -28,4 +28,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(SearchContainer)
+export default connect(mapStateToProps, {searchFilm} )(SearchContainer)

@@ -8,7 +8,6 @@ import SearchContainer from './containers/SearchContainer';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import FilmInfo from './components/FilmInfo';
-import LoadFilm from './components/LoadFilm';
 import Login from './components/Login';
 
 const App = () => {
@@ -26,7 +25,6 @@ console.log(API_KEY)
           <Route exact path="/films" component={FilmsContainer}/>
           <Route exact path="/favorites" component={FavoritesContainer} />
           <Route exact path="/search" component={SearchContainer}/>
-          <Route exact path="/films/:id" component={LoadFilm} />
           <Route exact path="/films/:id" render={props => <FilmInfo {...props} key={props.match.params.id} />} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />

@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 
 class AddFavorites extends Component {
   render() {
+    console.log(this.props.activeUser.films)
     if (this.props.activeUser) {
     return (
       <div>

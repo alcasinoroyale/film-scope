@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { fetchFilm } from '../actions/filmActions'
-import LoadFilm from '../components/LoadFilm'
 import AddFavorites from '../components/AddFavorites'
 import { connect } from 'react-redux';
 
@@ -14,7 +13,6 @@ class FilmInfo extends Component {
     console.log(this.props.film)
     return (
       <div className="filmInfo">
-        <LoadFilm film={this.props.film} />
           <h1>{this.props.film.title}</h1>
           <h3>{this.props.film.tagline}</h3>
           <img src={`https://image.tmdb.org/t/p/w342${this.props.film.poster_path}`} alt="poster" />
