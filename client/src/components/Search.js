@@ -18,7 +18,7 @@ class Search extends Component {
     event.preventDefault();
     this.props.handleSubmit(this.state.query);
     this.setState({
-      query: ""
+      query: ''
     })
   }
 

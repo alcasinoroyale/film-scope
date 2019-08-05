@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FilmCard from '../components/FilmCard';
 
-class Results extends Component {
-  render() {
-    return (
-      <div>
-      {this.props.films.slice(0,14).map((film, index) => {
+const Results = (props) => {
+  return (
+    <div>
+      {props.films.slice(0,14).map((film, index) => {
         return (
-          <FilmCard key={index} film={film} />
-        )
-      })}
-      </div>
-    )
-  }
+            <FilmCard key={index} film={film} /> 
+          )
+        }
+      )}
+    </div>
+  )
 }
 
 export default Results
