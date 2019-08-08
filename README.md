@@ -1,5 +1,5 @@
-# Film Scope
-Film Scope is a react app with a rails API that gives users the ability to search for films in a variety of genres and create a list of favorites.
+# Reel 2 Real
+Reel 2 Real is a React app with a Rails API where users can search for a variety of films, access the films' details, and create their own list of favorites.
 
 ## Installation
 Follow these instructions to start up the application.
@@ -29,11 +29,9 @@ $ cd client && npm install
 $ touch .env
 ```
 
-6. If existing TMDB API Key doesn't work, you can receive one at themoviedb.org. Then set up the API KEY with REACT_APP_FILM_API_KEY = (fill in with your key chars) inside the .env file.
+6. If existing TMDB API Key doesn't work, you can receive one at themoviedb.org. Then set up the API KEY with REACT_APP_FILM_API_KEY = (fill in with your key chars) inside the .env file. The filmActions.js file is set up to process this API KEY.
 
-7. Add the .env file to .gitignore so the API Key is hidden, filmActions.js is set to process this API KEY.
-
-8. CD back into project directory and start the development server
+7. CD back into project directory and start the development server
 ```
 $ cd .. && rake start
 ```
