@@ -106,6 +106,7 @@ form {
   display: inline;
   float: left;
   padding: 10px 20px;
+  position: relative;
 }
 
 .filmCard img {
@@ -205,4 +206,11 @@ form {
 
 .change-user:hover {
   color: #6C1D1D;
+}
+
+.unavailable h3 {
+  position: absolute;
+  top: 150px;
+  width: 100px;
+  color: #000000
 }
