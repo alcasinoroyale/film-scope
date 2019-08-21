@@ -210,7 +210,8 @@ form {
 
 .unavailable h3 {
   position: absolute;
-  top: 150px;
+  top: 25px;
+  font-size: 14px;
   width: 100px;
   color: #000000
 }
