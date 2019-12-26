@@ -47,7 +47,7 @@ class Signup extends Component {
     const { username, email, bio, password } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>Sign Up</h3>
+        <h2>Sign Up</h2>
 
         <label>Username</label>
         <div className="control">

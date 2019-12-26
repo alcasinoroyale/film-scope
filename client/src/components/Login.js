@@ -37,7 +37,7 @@ class Login extends Component {
 
     return (
         <div className="usersDropdown">
-          <h2>Login Page</h2>
+          <h2>Login</h2>
           <select onChange={(event) => this.handleChange(event)}>
             <option>Select Your Username</option>
             {mapUsers}

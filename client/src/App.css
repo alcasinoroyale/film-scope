@@ -161,10 +161,12 @@ form {
 }
 
 .taglines {
-  letter-spacing: 3px;
-  word-spacing: 5px;
-  font-family: 'Lato', sans-serif;
-  padding: 0px 30px;
+  font-family: 'Roboto', sans-serif;
+  padding: 6px 30px;
+  letter-spacing: 4px;
+  word-spacing: 8px;
+  text-transform: uppercase;
+
 }
 
 .login-link {
