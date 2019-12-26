@@ -11,6 +11,8 @@ p {
   font-size: 16px;
 }
 
+/* Header */
+
 .header {
   color: #f2f2f2;
   letter-spacing: 16px;
@@ -32,6 +34,7 @@ p {
   margin-left: 200px;
 }
 
+/* Footer */
 .footer {
   padding: 10px;
 }
@@ -45,6 +48,7 @@ p {
   text-transform: uppercase;
 }
 
+/* Navigation */
 .navMenu a {
   padding: 16px 30px;
   font-size: 18px;
@@ -63,6 +67,7 @@ p {
   margin-top: 10px;
 }
 
+/* Headings */
 h1 {
   padding-left: 10px;
   color: #f2f2f2;
@@ -85,14 +90,7 @@ h4 {
   color: #f2f2f2;
 }
 
-.control {
-  padding: 10px 0px;
-}
-
-form {
-  padding: 0px 10px;
-}
-
+/* Content */
 .usersDropdown {
   padding: 12px 16px;
 }
@@ -166,7 +164,6 @@ form {
   letter-spacing: 4px;
   word-spacing: 8px;
   text-transform: uppercase;
-
 }
 
 .login-link {
@@ -221,12 +218,22 @@ form {
   color: #000000
 }
 
+/* Forms & Buttons */
+
 .control input {
   font-size: 16px;
 }
 
 label {
   font-size: 20px;
+}
+
+.control {
+  padding: 10px 0px;
+}
+
+form {
+  padding: 0px 10px;
 }
 
 button {
