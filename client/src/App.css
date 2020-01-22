@@ -59,7 +59,7 @@ p {
 }
 
 .navMenu a:hover {
-  color: #6C1D1D;
+  color: #451500;
 }
 
 .navMenu {
@@ -146,40 +146,12 @@ h4 {
   font-size: 14px;
 }
 
-.link {
-  text-decoration: none;
-}
-
-.see-more {
-  border: none;
-  color: #f2f2f2;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-}
-
 .taglines {
   font-family: 'Roboto', sans-serif;
   padding: 6px 30px;
   letter-spacing: 4px;
   word-spacing: 8px;
   text-transform: uppercase;
-}
-
-.login-link {
-  text-decoration: none;
-  color: #560F0F;
-}
-
-.search-link {
-  font-size: 24px;
-  margin-top: 14px;
-  margin-right: 40px;
-  font-weight: bold;
-  color: #f2f2f2;
-  text-decoration: none;
-  text-shadow: 2px 2px #2b4048;
-  float: right;
 }
 
 .search-form {
@@ -216,6 +188,40 @@ h4 {
   font-size: 14px;
   width: 100px;
   color: #000000
+}
+
+/* Links */
+
+.link {
+  text-decoration: none;
+}
+
+.see-more {
+  border: none;
+  color: #f2f2f2;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #451500;
+}
+
+.search-link {
+  font-size: 24px;
+  margin-top: 14px;
+  margin-right: 40px;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-decoration: none;
+  letter-spacing: 2px;
+  float: right;
+}
+
+.search-link:hover {
+  color: #451500;
 }
 
 /* Forms & Buttons */
