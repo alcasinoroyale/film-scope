@@ -2,6 +2,7 @@ body {
   background-image: url("images/vintagefilm.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #001f33;
   color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
 }
@@ -71,13 +72,11 @@ p {
 h1 {
   padding-left: 10px;
   color: #f2f2f2;
-  text-shadow: 2px 2px #2b4048;
 }
 
 h2 {
   padding-left: 20px;
   color: #f2f2f2;
-  text-shadow: 2px 2px #2b4048;
 }
 
 h3 {
@@ -225,13 +224,25 @@ h4 {
 }
 
 /* Forms & Buttons */
+.signupForm {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 300px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.signupForm h2 {
+  color: #366678;
+}
+
+.signupForm label {
+  color: #333;
+  font-size: 18px;
+}
 
 .control input {
   font-size: 16px;
-}
-
-label {
-  font-size: 20px;
 }
 
 .control {
