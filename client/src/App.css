@@ -27,11 +27,11 @@ p {
   background-position: 0px -210px;
   position: relative;
   text-transform: uppercase;
-  min-height: 340px;
+  min-width: 340px;
 }
 
 .header h2 {
-  margin-top: 270px;
+  margin-top: 276px;
   margin-left: 200px;
 }
 
@@ -108,7 +108,7 @@ h4 {
 
 .filmCard img {
   border-radius: 8px;
-  border: 1px solid #9CB1B6;
+  border: 2px solid #e8e8e8;
   height: 236px;
 }
 
